@@ -1,0 +1,63 @@
+{
+  "alfred": {
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "roux"
+    ],
+    "yeux": [
+      "bleu"
+    ],
+    "pilosité faciale": [
+      "moustache"
+    ],
+    "accesoires": []
+  },
+  "anita": {
+    "genre": [
+      "femme"
+    ],
+    "cheveux": [
+      "blonds"
+    ],
+    "yeux": [
+      "bleu"
+    ],
+    "pilosité faciale": [],
+    "accesoires": [
+      "rubans"
+    ]
+  },
+  "anna": {
+    "genre": [
+      "femme"
+    ],
+    "cheveux": [
+      "bruns"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosité faciale": [],
+    "accesoires": [
+      "boucles d'oreille",
+      "rouge à lèvres"
+    ]
+  },
+  "charlie": {
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "blonds"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosité faciale": [
+      "moustache"
+    ],
+    "accesoires": []
+  }
+}
