@@ -1,4 +1,5 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QComboBox, QVBoxLayout, QPushButton
+from PyQt5.QtWidgets import QApplication, QWidget, QComboBox, QVBoxLayout, QPushButton, QGridLayout, QLabel
+from PyQt5.QtGui import QPixmap
 import os, json
 
 class SelectGridWindow(QWidget):
@@ -46,16 +47,43 @@ class GameWindow(QWidget):
         self.grid_path = grid_path
         with open(grid_path+'/'+grid_path.split('/')[1]+'.json', "r") as datas:
             self.grid_datas = json.load(datas)
+
+        self.grid_layout = self.grid_datas.pop('layout')
+
+        self.item_list = []
+
         self.setWindowTitle(grid_path.split('/')[1])
 
-        print(self.grid_datas)
-
         self.show()
+        self.make_game_layout()
 
-    def make_layout(self):
-        pass
+    def make_game_layout(self):
+        layout = QGridLayout()
+        k = 0
+        for i in range(self.grid_layout[0]):
+            for j in range(self.grid_layout[1]):
+                game_item = GameItem(self.grid_path, self.grid_datas[list(self.grid_datas)[k]])
+                self.item_list.append(game_item)
 
+                layout.addWidget(game_item, i, j)
 
+                k+=1
+
+        self.setLayout(layout)
+
+class GameItem(QLabel):
+    def __init__(self, dir, datas):
+        super().__init__()
+        self.name = datas['nom']
+        self.image_path = dir + '/' + self.name + '.png'
+        self.datas = datas
+
+        self.setPixmap(QPixmap(self.image_path))
+
+        self.mousePressEvent = self.when_clicked
+
+    def when_clicked(self, event):
+        print('click!')
 
 whoami = QApplication.instance() # Utile pour travailler aec l'IDE
 if not whoami:

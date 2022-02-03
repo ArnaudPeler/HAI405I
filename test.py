@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QMainWindow
+"""from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QMainWindow
 import os
 
 class MenuWindow(QWidget):
@@ -34,4 +34,8 @@ if not whoami:
 
 menu_window = MenuWindow()
 
-whoami.exec_()
+whoami.exec_()"""
+
+for i in range(4):
+    for j in range(4):
+        print(i,j)

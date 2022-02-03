@@ -1,5 +1,10 @@
 {
+  "layout": [
+    2,
+    2
+  ],
   "alfred": {
+    "nom": "alfred",
     "genre": [
       "homme"
     ],
@@ -15,6 +20,7 @@
     "accesoires": []
   },
   "anita": {
+    "nom": "anita",
     "genre": [
       "femme"
     ],
@@ -30,6 +36,7 @@
     ]
   },
   "anna": {
+    "nom": "anna",
     "genre": [
       "femme"
     ],
@@ -46,6 +53,7 @@
     ]
   },
   "charlie": {
+    "nom": "charlie",
     "genre": [
       "homme"
     ],
