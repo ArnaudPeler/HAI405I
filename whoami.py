@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QComboBox, QVBoxLayout, QPushButton, QGridLayout, QLabel
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QPixmap, QPainter, QPen
+from PyQt5.QtCore import Qt
 import os, json
 
 class SelectGridWindow(QWidget):
@@ -78,12 +79,27 @@ class GameItem(QLabel):
         self.image_path = dir + '/' + self.name + '.png'
         self.datas = datas
 
-        self.setPixmap(QPixmap(self.image_path))
+        self.image = QPixmap(self.image_path)
+        self.setPixmap(self.image)
+
+        self.image_clicked = QPixmap(self.image_path)
+        qp = QPainter(self.image_clicked)
+        qp.setPen(QPen(Qt.red, 3))
+        qp.drawLine(0, 0, 100, 100)
+        qp.end()
+
+
+        self.is_clicked = False
 
         self.mousePressEvent = self.when_clicked
 
     def when_clicked(self, event):
-        print('click!')
+        if self.is_clicked == False:
+            self.setPixmap(self.image_clicked)
+            self.is_clicked = True
+        else:
+            self.setPixmap(self.image)
+            self.is_clicked = False
 
 whoami = QApplication.instance() # Utile pour travailler aec l'IDE
 if not whoami:
