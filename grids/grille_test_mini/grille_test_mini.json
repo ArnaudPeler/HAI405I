@@ -4,7 +4,7 @@
     2
   ],
   "alfred": {
-    "nom": "alfred",
+    "nom": ["alfred"],
     "genre": [
       "homme"
     ],
@@ -20,7 +20,7 @@
     "accesoires": []
   },
   "anita": {
-    "nom": "anita",
+    "nom": ["anita"],
     "genre": [
       "femme"
     ],
@@ -36,7 +36,7 @@
     ]
   },
   "anna": {
-    "nom": "anna",
+    "nom": ["anna"],
     "genre": [
       "femme"
     ],
@@ -53,7 +53,7 @@
     ]
   },
   "charlie": {
-    "nom": "charlie",
+    "nom": ["charlie"],
     "genre": [
       "homme"
     ],

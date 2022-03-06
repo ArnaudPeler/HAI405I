@@ -1,4 +1,5 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QComboBox, QVBoxLayout, QPushButton, QGridLayout, QLabel
+import random
+from PyQt5.QtWidgets import QApplication, QWidget, QComboBox, QVBoxLayout, QPushButton, QGridLayout, QLabel, QHBoxLayout, QMessageBox
 from PyQt5.QtGui import QPixmap, QPainter, QPen
 from PyQt5.QtCore import Qt
 import os, json
@@ -13,7 +14,7 @@ class SelectGridWindow(QWidget):
         for grid in self.grids_list:
                 self.selector.addItem(grid.split('/')[1])
         button = QPushButton('Séléctioner')
-        button.clicked.connect(self.button_clicked,self.selector.currentIndex())
+        button.clicked.connect(self.button_clicked, self.selector.currentIndex())
 
         layout = QVBoxLayout()
         layout.addWidget(self.selector)
@@ -52,13 +53,21 @@ class GameWindow(QWidget):
         self.grid_layout = self.grid_datas.pop('layout')
 
         self.item_list = []
+        self.questions_n_answers = {}
 
         self.setWindowTitle(grid_path.split('/')[1])
 
-        self.show()
-        self.make_game_layout()
+        self.layout = QVBoxLayout()
+        self.items_layout()
+        self.questions_layout()
+        self.setLayout(self.layout)
 
-    def make_game_layout(self):
+        self.random_pick = random.choice(self.item_list)
+        print(self.random_pick.name)
+
+        self.show()
+
+    def items_layout(self):
         layout = QGridLayout()
         k = 0
         for i in range(self.grid_layout[0]):
@@ -70,36 +79,88 @@ class GameWindow(QWidget):
 
                 k+=1
 
-        self.setLayout(layout)
+        self.layout.addLayout(layout)
+
+    def questions_layout(self): #besoin de changer la disposition des éléments pour éviter que les sélections soient coupés
+        layout = QHBoxLayout()
+
+        layout.addWidget(QLabel("Question :"))
+        for item in self.item_list:
+            for question in list(item.datas.keys()):
+                if question not in self.questions_n_answers:
+                    self.questions_n_answers[question] = item.datas[question]
+                else:
+                    for answer in item.datas[question]:
+                        if answer not in self.questions_n_answers[question]:
+                            self.questions_n_answers[question].append(answer)
+
+        self.question_selector = QComboBox()
+        self.question_selector.addItems(list(self.questions_n_answers.keys()))
+        self.question_selector.currentTextChanged.connect(self.change_answer_selection)
+        layout.addWidget(self.question_selector)
+
+        self.answer_selector = QComboBox()
+        self.change_answer_selection(self.question_selector.currentText())
+        layout.addWidget(self.answer_selector)
+
+        submit_button = QPushButton('Submit')
+        submit_button.clicked.connect(self.submit_button_cliked)
+        layout.addWidget(submit_button)
+
+        self.layout.addLayout(layout)
+
+    def change_answer_selection(self, text):
+        self.answer_selector.clear()
+        self.answer_selector.addItems(self.questions_n_answers[text] + ['aucun'])
+
+    def submit_button_cliked(self):
+
+        dlg = QMessageBox(self)
+        dlg.setWindowTitle("Answer !")
+        if self.answer_selector.currentText() in self.random_pick.datas[self.question_selector.currentText()]:
+            dlg.setText("C'est vrai !")
+        else:
+            dlg.setText("C'est faux !")
+        button = dlg.exec()
+
+        if button == QMessageBox.Ok: #erreur à la fermeture de la boite de dialogue
+            if self.random_pick.name == self.answer_selector.currentText():
+                dlg.setWindowTitle("Bravo !")
+                dlg.setText("Vous avez trouvé !")
+                button = dlg.exec()
+                if button == QMessageBox.Ok:
+                    print('WIN!')
+                    self.close()
+
 
 class GameItem(QLabel):
     def __init__(self, dir, datas):
         super().__init__()
-        self.name = datas['nom']
+        self.name = datas['nom'][0]
         self.image_path = dir + '/' + self.name + '.png'
         self.datas = datas
 
         self.image = QPixmap(self.image_path)
         self.setPixmap(self.image)
 
-        self.image_clicked = QPixmap(self.image_path)
-        qp = QPainter(self.image_clicked)
+        self.image_crossed = QPixmap(self.image_path)
+        qp = QPainter(self.image_crossed)
         qp.setPen(QPen(Qt.red, 3))
-        qp.drawLine(0, 0, 100, 100)
+        qp.drawLine(0, 0, 100, 100) # à changer pour mieux correspondre à la taille de l'image
         qp.end()
 
 
-        self.is_clicked = False
+        self.is_crossed = False
 
-        self.mousePressEvent = self.when_clicked
+        self.mousePressEvent = self.when_crossed
 
-    def when_clicked(self, event):
-        if self.is_clicked == False:
-            self.setPixmap(self.image_clicked)
-            self.is_clicked = True
+    def when_crossed(self, event):
+        if self.is_crossed == False:
+            self.setPixmap(self.image_crossed)
+            self.is_crossed = True
         else:
             self.setPixmap(self.image)
-            self.is_clicked = False
+            self.is_crossed = False
 
 whoami = QApplication.instance() # Utile pour travailler aec l'IDE
 if not whoami:
