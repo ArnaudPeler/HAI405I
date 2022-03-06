@@ -14,7 +14,7 @@ class SelectGridWindow(QWidget):
         for grid in self.grids_list:
                 self.selector.addItem(grid.split('/')[1])
         button = QPushButton('Séléctioner')
-        button.clicked.connect(self.button_clicked, self.selector.currentIndex())
+        button.clicked.connect(self.button_clicked)
 
         layout = QVBoxLayout()
         layout.addWidget(self.selector)
@@ -39,8 +39,8 @@ class SelectGridWindow(QWidget):
                     raise Exception('no grid folder in "grids" folder')
         return grids_list
 
-    def button_clicked(self, index):
-        self.w = GameWindow(self.grids_list[index])
+    def button_clicked(self):
+        self.w = GameWindow(self.grids_list[self.selector.currentIndex()])
         self.close()
 
 class GameWindow(QWidget):
@@ -116,7 +116,8 @@ class GameWindow(QWidget):
 
         dlg = QMessageBox(self)
         dlg.setWindowTitle("Answer !")
-        if self.answer_selector.currentText() in self.random_pick.datas[self.question_selector.currentText()]:
+        if self.answer_selector.currentText() in self.random_pick.datas[self.question_selector.currentText()]\
+                or (self.answer_selector.currentText() == 'aucun' and self.random_pick.datas[self.question_selector.currentText()]==[]):
             dlg.setText("C'est vrai !")
         else:
             dlg.setText("C'est faux !")

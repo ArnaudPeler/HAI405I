@@ -8,8 +8,6 @@ Vous pouvez cloner directement le projet avec :
 $ git clone https://github.com/ArnaudPeler/HAI405I.git
 ```
 
-Toutes les ressources nécessaires au bon fonctionnement du projet se trouve dans le dossier `venv` à la racine du projet.
-
 La version de Python utilisé est Python 3.10 et les seules librairies non fournies directement avec Python viennent de `PyQt5` installables avec :
 
 ``` bash

@@ -1,0 +1,434 @@
+{
+  "layout": [
+    4,
+    6
+  ],
+  "alfred": {
+    "nom": [
+      "alfred"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "roux"
+    ],
+    "yeux": [
+      "bleu"
+    ],
+    "pilosite faciale": [
+      "moustache"
+    ],
+    "accesoires": []
+  },
+  "anita": {
+    "nom": [
+      "anita"
+    ],
+    "genre": [
+      "femme"
+    ],
+    "cheveux": [
+      "blonds"
+    ],
+    "yeux": [
+      "bleu"
+    ],
+    "pilosite faciale": [],
+    "accesoires": [
+      "rubans"
+    ]
+  },
+  "anna": {
+    "nom": [
+      "anna"
+    ],
+    "genre": [
+      "femme"
+    ],
+    "cheveux": [
+      "bruns"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [],
+    "accesoires": [
+      "boucles d'oreille",
+      "rouge à lèvres"
+    ]
+  },
+  "charlie": {
+    "nom": [
+      "charlie"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "blonds"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [
+      "moustache"
+    ],
+    "accesoires": []
+  },
+  "clara": {
+    "nom": [
+      "clara"
+    ],
+    "genre": [
+      "femme"
+    ],
+    "cheveux": [
+      "roux"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [],
+    "accesoires": [
+      "lunettes",
+      "chapeau"
+    ]
+  },
+  "eric": {
+    "nom": [
+      "eric"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "blanc"
+    ],
+    "yeux": [
+      "bleu"
+    ],
+    "pilosite faciale": [],
+    "accesoires": [
+      "lunettes",
+      "chapeau"
+    ]
+  },
+  "felix": {
+    "nom": [
+      "felix"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "blonds"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [],
+    "accesoires": [
+      "chapeau"
+    ]
+  },
+  "jeremie": {
+    "nom": [
+      "jeremie"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "bruns"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [],
+    "accesoires": []
+  },
+  "leon": {
+    "nom": [
+      "leon"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "blonds"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [],
+    "accesoires": [
+      "lunettes"
+    ]
+  },
+  "luc": {
+    "nom": [
+      "luc"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "bruns"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [
+      "barbe"
+    ],
+    "accesoires": []
+  },
+  "lucas": {
+    "nom": [
+      "lucas"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "roux"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [],
+    "accesoires": []
+  },
+  "manu": {
+    "nom": [
+      "manu"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "bruns"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [
+      "moustache"
+    ],
+    "accesoires": []
+  },
+  "maria": {
+    "nom": [
+      "maria"
+    ],
+    "genre": [
+      "femme"
+    ],
+    "cheveux": [
+      "bruns"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [],
+    "accesoires": [
+      "chapeau"
+    ]
+  },
+  "mario": {
+    "nom": [
+      "mario"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "blonds"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [
+      "barbe"
+    ],
+    "accesoires": []
+  },
+  "martin": {
+    "nom": [
+      "martin"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "blanc"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [],
+    "accesoires": [
+      "chapeau"
+    ]
+  },
+  "max": {
+    "nom": [
+      "max"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "bruns"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [
+      "moustache"
+    ],
+    "accesoires": []
+  },
+  "omar": {
+    "nom": [
+      "omar"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "roux"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [],
+    "accesoires": []
+  },
+  "oscar": {
+    "nom": [
+      "oscar"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "bruns"
+    ],
+    "yeux": [
+      "bleu"
+    ],
+    "pilosite faciale": [
+      "moustache"
+    ],
+    "accesoires": []
+  },
+  "romeo": {
+    "nom": [
+      "romeo"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "bruns"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [
+      "barbe",
+      "moustache"
+    ],
+    "accesoires": []
+  },
+  "samuel": {
+    "nom": [
+      "samuel"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "blanc"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [],
+    "accesoires": [
+      "lunettes"
+    ]
+  },
+  "simon": {
+    "nom": [
+      "simon"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "blanc"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [],
+    "accesoires": [
+      "lunettes"
+    ]
+  },
+  "suzane": {
+    "nom": [
+      "suzane"
+    ],
+    "genre": [
+      "femme"
+    ],
+    "cheveux": [
+      "blanc"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [],
+    "accesoires": []
+  },
+  "timeo": {
+    "nom": [
+      "timeo"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "bruns"
+    ],
+    "yeux": [
+      "bleu"
+    ],
+    "pilosite faciale": [],
+    "accesoires": [
+      "lunettes"
+    ]
+  },
+  "tony": {
+    "nom": [
+      "tony"
+    ],
+    "genre": [
+      "homme"
+    ],
+    "cheveux": [
+      "roux"
+    ],
+    "yeux": [
+      "marron"
+    ],
+    "pilosite faciale": [
+      "barbe"
+    ],
+    "accesoires": []
+  }
+}
