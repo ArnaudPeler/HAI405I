@@ -26,7 +26,7 @@ $ python3 whoami.py
 
 ## Comment jouer
 
-Au lancement du programme, vous tomberez sur une fenêtre vous laissant choisir une des grilles disponible. Il y en à 2 pour le moment, une basé sur les exemples d'images données pour le projet, et une version miniature de celle ci.
+Au lancement du programme, vous tomberez sur une fenêtre vous laissant choisir une des grilles disponible. Il y en a 2 pour le moment, une basé sur les exemples d'images données pour le projet, et une version miniature de celle ci.
 
 Au début du jeu, l'ordinateur choisit un personnage au hasard parmi ceux présent sur la grille et vous devez trouver lequel en posant des questions grâce aux boîtes de sélection en bas de la fenêtre.
 
