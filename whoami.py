@@ -63,7 +63,6 @@ class GameWindow(QWidget):
         self.setLayout(self.layout)
 
         self.random_pick = random.choice(self.item_list)
-        print(self.random_pick.name)
 
         self.show()
 
@@ -129,7 +128,6 @@ class GameWindow(QWidget):
                 dlg.setText("Vous avez trouvé !")
                 button = dlg.exec()
                 if button == QMessageBox.Ok:
-                    print('WIN!')
                     self.close()
 
 
